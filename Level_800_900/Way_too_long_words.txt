@@ -1,0 +1,25 @@
+
+import java.util.Scanner;
+public class waylongtoowords{
+
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        String str;
+        int times=input.nextInt();
+
+        while(times>0){
+            str=input.next();
+            String temp="";
+            if(str.length()>10){
+                temp+=str.charAt(0);
+                temp+=Integer.toString(str.length()-2);
+                temp+=str.charAt(str.length()-1);
+            }
+            else{
+                temp+=str;
+            }
+            System.out.println(temp);
+            times--;
+        }
+    }
+}
